@@ -18,6 +18,9 @@ jobs:
       - name: コードの校正
         run: |
           flake8 . --count --show-source --statistics --exclude=./test_*.py
+      - name: テストコード一覧の表示
+        run: |
+          ls ./test_*.py
       - name: テストコードの実行
         run: |
           pytest test_*.py
