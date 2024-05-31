@@ -7,17 +7,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Setup
+      - name: acitonsの立ち上げ
         uses: actions/setup-python@v5.1.0
         with:
           python-version: '3.x'
-      - name: Install dependencies
+      - name: 必要パッケージのインストール
         run: |
           python -m pip install --upgrade pip
           pip install flake8 pytest
-      - name: Lint
+      - name: コードの校正
         run: |
           flake8 . --count --show-source --statistics --exclude=./test_*.py
-      - name: Test
+      - name: テストコードの実行
         run: |
           pytest test_*.py
