@@ -29,5 +29,5 @@ jobs:
           pytest test_fizzbuzz.py --junitxml='test.xml'
       - uses: actions/upload-artifact@v4.3.3
         with:
-      - name: atest-results
-        path: './test.xml'
+        - name: atest-results
+          path: './test.xml'
