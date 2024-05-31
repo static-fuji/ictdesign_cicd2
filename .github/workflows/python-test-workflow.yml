@@ -24,3 +24,6 @@ jobs:
       - name: テストコードの実行
         run: |
           pytest test_*.py
+      - name: テスト結果の出力
+        run: |
+          pytest test.py -junitxml=junit.xml
